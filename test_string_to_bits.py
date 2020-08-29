@@ -1,5 +1,7 @@
 from image_embedder import ascii_to_bits
 
+def test_convert_empty():
+    assert ascii_to_bits("") == ""
 
 def test_convert_single_char():
     assert ascii_to_bits("a") == "1100001"

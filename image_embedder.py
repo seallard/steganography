@@ -4,8 +4,11 @@ def integer_to_binary(integer):
     return f'{integer:07b}'
 
 def ascii_to_bits(text):
-    binary = bin(int.from_bytes(text.encode(), 'big'))
-    return binary
+    bitstring = ""
+    for char in text:
+        ascii_integer = ord(char)
+        bitstring += integer_to_binary(ascii_integer)
+    return bitstring
 
 def bits_to_ascii(bitstring):
     pass

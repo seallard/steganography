@@ -10,10 +10,13 @@ def binary_to_integer(bit_string):
 def integer_to_ascii(integer):
     return chr(integer)
 
+def ascii_to_integer(ascii):
+    return ord(ascii)
+
 def ascii_to_bits(text):
     bit_string = ""
     for char in text:
-        ascii_integer = ord(char)
+        ascii_integer = ascii_to_integer(char)
         bit_string += integer_to_binary(ascii_integer)
     return bit_string
 
